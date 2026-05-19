@@ -75,3 +75,4 @@ GitHub Actions ejecuta compilación y pruebas al hacer push en `main`.
 - El punto restante corresponde a la evidencia de salida ordenada en `App`.
 
 ¡Éxitos!
+bryam
