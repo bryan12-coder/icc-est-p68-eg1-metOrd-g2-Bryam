@@ -1,20 +1,23 @@
+import controllers.MovieController;
+import models.Movie;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("=== Evaluación: Ordenamiento de Películas por Título ===\n");
-        // imirpimir la lista de películas sin ordenar
-        // ordenar la lista de películas por título utilizando el método sortByTitle del
-        // MovieController
-        // imprimir la lista de películas ordenada
+        Movie[] movies = generateMoviesList();
+        for (Movie m : movies) {
+            System.out.println("nombre=" + m.getName()+ "Año=" +  m.getYear());
 
-    }
+            
+        }
+        System.out.println("------Ordenado-------");
+        MovieController j=new MovieController();
+        j.sortByTitle(movies);
+        j.Imprimir(movies);
+    }    
 
-    /**
-     * Genera una lista de películas de ejemplo para practicar ordenamiento
-     * Incluye películas con títulos iguales pero diferente capitalización
-     * 
-     * @return Array de películas sin ordenar
-     */
+
+        
     public static Movie[] generateMoviesList() {
         Movie[] movies = new Movie[25];
         movies[0] = new Movie("Inception", 2010);
